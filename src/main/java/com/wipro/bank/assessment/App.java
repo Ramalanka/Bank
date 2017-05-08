@@ -27,9 +27,19 @@ public class App {
 	}
 	
 	public List<Account> getAccountDetailsByBalance(double amount){	
-	List<Account> dummylist=new ArrayList<Account>();
-	return dummylist;
-	}	
+		List<Account> dummylist=new ArrayList<Account>();
+		Iterator<Account> iterator = accounts.iterator();
+		while (iterator.hasNext()) {
+			Account acc = iterator.next();
+	           if(acc.getBalance()>=amount){
+	                 dummylist.add(acc);
+	           }               
+	    }
+	    if(dummylist.isEmpty())
+	    	dummylist=null;
+	    
+	   return dummylist;
+		}	
 	
 	public static void main( String[] args )
     {       
@@ -44,7 +54,7 @@ public class App {
        
        App temp = new App();
       System.out.println(temp.getAccountDetailsByID(1));
-      System.out.println(temp.getAccountDetailsByBalance(100));
+      System.out.println(temp.getAccountDetailsByBalance(1100));
        
        
     }
