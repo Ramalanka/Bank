@@ -16,6 +16,13 @@ public class App {
 
 	public Account getAccountDetailsByID(int id){
 		Account acc=null;
+		Iterator<Account> iterator = accounts.iterator();
+		while (iterator.hasNext()) {
+		Account a = iterator.next();
+		if(id==a.getAccountID()){
+			acc=a;
+		}
+		}
 		return acc;
 	}
 	
