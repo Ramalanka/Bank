@@ -42,7 +42,7 @@ public class AppTest{
 		List<Account> actualAccounts=new App().getAccountDetailsByBalance(101.11);
 		assertNotNull(actualAccounts);
 		assertEquals(App.accounts.size(),actualAccounts.size());		
-		List<Account> actualAccounts1=new App().getAccountDetailsByBalance(500.00);	
+		List<Account> actualAccounts1=new App().getAccountDetailsByBalance(501.00);	
 		assertNotEquals(App.accounts.size(),actualAccounts1.size());	
 	}
 
