@@ -19,7 +19,7 @@ public class App {
 		Iterator<Account> iterator = accounts.iterator();
 		while (iterator.hasNext()) {
 		Account a = iterator.next();
-		if(id==a.getAccountID()){
+		if(a.getAccountID()==id){
 			acc=a;
 		}
 		}
@@ -35,7 +35,7 @@ public class App {
 	                 dummylist.add(acc);
 	           }               
 	    }
-	    if(dummylist.isEmpty())
+	    if(dummylist.size()==0)
 	    	dummylist=null;
 	    
 	   return dummylist;
